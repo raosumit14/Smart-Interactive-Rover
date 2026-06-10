@@ -1,32 +1,76 @@
-# _Sample project_
+# Smart Interactive Rover
 
-(See the README.md file in the upper level 'examples' directory for more information about examples.)
+## Overview
+The Smart Interactive Rover is an ESP32 based Bluetooth controlled robotic vehicle designed for interactive operation and future AI integration. The rover uses FreeRTOS multitasking, OLED based expressions, ultrasonic sensing, and wireless control to create an intelligent embedded platform.
 
-This is the simplest buildable example. The example is used by command `idf.py create-project`
-that copies the project to user specified path and set it's name. For more information follow the [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project)
+## Features
+
+- Bluetooth control using ESP32
+- OLED display for facial expressions
+- HC-SR04 ultrasonic obstacle detection
+- L293D motor driver based motor control
+- FreeRTOS multitasking
+- Real-time sensor monitoring
+- Modular architecture for future AI integration
+
+## Hardware Components
+
+| Component | Quantity |
+|------------|------------|
+| ESP32 | 1 |
+| HC-SR04 Ultrasonic Sensor | 1 |
+| OLED Display | 1 |
+| L293D Motor Driver IC | 1 |
+| DC Motors | 2 |
+| Robot Chassis | 1 |
+| Battery Pack | 1 |
+
+## Software Used
+
+- ESP-IDF
+- FreeRTOS
+- C Programming
+- VS Code
+
+## Working Principle
+
+1. Smartphone sends commands via Bluetooth.
+2. ESP32 receives and processes commands.
+3. Motors are driven through the L293D motor driver.
+4. Ultrasonic sensor continuously measures obstacle distance.
+5. OLED displays system status and expressions.
+6. FreeRTOS manages concurrent tasks for smooth operation.
+
+## FreeRTOS Tasks
+
+### Motor Control Task
+Controls rover movement.
+
+### Ultrasonic Sensor Task
+Measures obstacle distance.
+
+### OLED Display Task
+Updates facial expressions and status.
+
+### Bluetooth Task
+Receives commands from smartphone.
+
+## Project Images
+
+<img width="1600" height="1200" alt="image" src="https://github.com/user-attachments/assets/edf6323d-dc76-4a69-8250-d74dc37a871b" />
+<img width="4160" height="3120" alt="WhatsApp Image 2026-06-10 at 9 28 38 AM" src="https://github.com/user-attachments/assets/fde44919-033d-472c-add9-0707e419bf6c" />
 
 
 
-## How to use example
-We encourage the users to use the example as a template for the new projects.
-A recommended way is to follow the instructions on a [docs page](https://docs.espressif.com/projects/esp-idf/en/latest/api-guides/build-system.html#start-a-new-project).
+## Demo Video
 
-## Example folder contents
+(https://youtu.be/qZVmUPh_stM)
 
-The project **sample_project** contains one source file in C language [main.c](main/main.c). The file is located in folder [main](main).
+## Future Improvements
 
-ESP-IDF projects are built using CMake. The project build configuration is contained in `CMakeLists.txt`
-files that provide set of directives and instructions describing the project's source files and targets
-(executable, library, or both). 
+- Voice control
+- AI integration
 
-Below is short explanation of remaining files in the project folder.
+## Author
 
-```
-├── CMakeLists.txt
-├── main
-│   ├── CMakeLists.txt
-│   └── main.c
-└── README.md                  This is the file you are currently reading
-```
-Additionally, the sample project contains Makefile and component.mk files, used for the legacy Make based build system. 
-They are not used or needed when building with CMake and idf.py.
+Sumit Rao
